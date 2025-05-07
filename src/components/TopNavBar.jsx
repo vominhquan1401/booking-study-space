@@ -3,7 +3,10 @@ import React from "react";
 import { Cog6ToothIcon, BellIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
 
+let arr = ["dashboard", "user", "booking", "report"];
+
 export default function TopNavBar() {
+  const currentPath = window.location.pathname;
   return (
     <header className="w-full bg-white shadow-sm px-4 md:px-10 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -15,9 +18,10 @@ export default function TopNavBar() {
           {["Dashboard", "Người Dùng", "Đặt Lịch", "Report"].map((label, i) => (
             <a
               key={i}
-              href="#"
+              href={`/${arr[i]}`}
               className={`rounded-full px-4 py-1.5 text-sm font-medium ${
-                label === "Dashboard"
+                // TODO
+                currentPath === `/${arr[i]}`
                   ? "bg-blue-500 text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
