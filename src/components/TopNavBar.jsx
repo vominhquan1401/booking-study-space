@@ -3,7 +3,7 @@ import React from "react";
 import { Cog6ToothIcon, BellIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
 
-let arr = ["dashboard", "user", "booking", "report"];
+let arr = ["dashboard", "calendar", "booking", "report"];
 
 export default function TopNavBar() {
   const currentPath = window.location.pathname;
